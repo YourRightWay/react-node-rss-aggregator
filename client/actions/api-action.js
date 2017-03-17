@@ -68,24 +68,3 @@ export function getChannel(value) {
 
     }
 }
-
-export function testActionHandler(val) {
-    return function (dispatch, getState) {
-        
-        let points = [];
-
-        function getRandom(min, max) {
-            return Math.round(Math.random() * (max - min) + min);
-        }
-        
-        for (let i = 0; i < val; i++) {
-            points.push(getRandom(1, 100))
-        }
-
-        dispatch({
-            type: "TEST_ACTION_HANDLER",
-            points
-        })
-        
-    }
-}

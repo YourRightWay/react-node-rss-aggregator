@@ -8,14 +8,7 @@ import ChanneldList from '../components/channel-list-component/channel-list'
 import ModalFeedsList from '../components/feeds-aside-component/feeds-aside'
 import ValidateComponent from '../components/system/validate-component/validate-component'
 
-import * as apiAction from '../actions/api-action'
-
 class Layout extends Component {
-    
-    componentDidMount() {
-        let { testActionHandler } = this.props.apiAction;
-        testActionHandler(50);
-    }
     
     render() {
         let { validateText, validateNotify } = this.props.validate;
@@ -34,17 +27,11 @@ class Layout extends Component {
 
 function mapStateToProps(state) {
     return {
-        validate: state.Validate,
+        validate: state.Validate
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        apiAction: bindActionCreators(apiAction, dispatch)
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout)
+export default connect(mapStateToProps, null)(Layout)
 
 
 
