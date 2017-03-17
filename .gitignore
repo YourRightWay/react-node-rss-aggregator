@@ -1,0 +1,14 @@
+# vagrant runtime
+/.vagrant
+
+# sass cache temporary folder
+/sass-cache
+
+/dist
+
+# folder for install node modules
+/node_modules
+mongodb/
+npm-debug.log
+.DS_Store
+.idea/

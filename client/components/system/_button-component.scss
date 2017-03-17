@@ -1,0 +1,27 @@
+button.g__btn {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  background: none;
+  border: none;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  @include user-select(none);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+}
+
+button.btn-search {
+  position: absolute;
+  background: #333;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 48px;
+  @include text($default-font, 14, normal, normal, #fff);
+}

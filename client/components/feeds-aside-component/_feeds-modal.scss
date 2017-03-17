@@ -1,0 +1,202 @@
+.feeds-aside__container {
+  width: 768px;
+  height: 114%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  z-index: 1450;
+  willChange: transform;
+  transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  padding: 0 4px 68px 4px;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(-768px, 0, 0);
+}
+
+.feeds-aside__container--active {
+  transform: translate3d(0, 0, 0);
+}
+
+.nav-modal {
+  display: inline-block;
+  border-bottom: 1px solid $default-border-color;
+  width: 100%;
+
+  button.btn__close {
+    position: relative;
+    left: 0;
+    float: left;
+    padding: 24px 24px;
+    overflow: hidden;
+    height: 100%;
+    border: none;
+    outline: none;
+    -webkit-appearance: button;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1000;
+
+    span.btn__close-line {
+      height: 1px;
+      width: 22px;
+      background: #000;
+      position: absolute;
+      left: 12px;
+      transition: transform 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+      &:first-of-type {
+        top: 16px;
+      }
+
+      &:nth-child(2) {
+        top: 22px;
+        width: 16px;
+      }
+
+      &:last-of-type {
+        top: 28px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.feeds-aside__content {
+  padding: 24px 12px 12px 12px;
+
+  span.feeds-aside__title {
+    @include text($default-font, 18, 54px, normal, $default-text-color);
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.feed-news__container {
+  .feed-news__item {
+    padding: 12px 48px 12px 0;
+    border-bottom: 1px solid $default-border-color;
+    position: relative;
+
+    span.feed-news__saved {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 40px;
+      background: #000;
+      right: 58px;
+      top: 6px;
+      z-index: 123;
+
+      &:after {
+        @include psv();
+        width: 12px;
+        height: 2px;
+        background: #fff;
+        top: 12px;
+        left: 9px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(-45deg);
+      }
+
+      &:before {
+        @include psv();
+        width: 8px;
+        height: 2px;
+        background: #fff;
+        top: 14px;
+        left: 4px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    button.feed-news__read {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      padding: 2px 8px;
+      @include text($default-font, 12, normal, normal, $default-text-color);
+      text-transform: uppercase;
+      border: 1px solid $default-border-color;
+    }
+  }
+}
+
+.feeds-aside__back {
+  position: relative;
+
+  span {
+    padding: 10px 8px 10px 24px;
+    @include text($default-font, 12, normal, normal, $default-text-color);
+    text-transform: uppercase;
+    border: 1px solid $default-border-color;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+.feed-info__container {
+
+  margin-top: 12px;
+
+  .feed-info__img {
+    max-width: 140px;
+    width: 100%;
+    height: 100px;
+    float: left;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  .feed-info__description {
+    padding-left: 12px;
+    overflow: hidden;
+
+    span.feed-info__title {
+      @include text($default-font, 18, normal, normal, $default-text-color);
+      display: block;
+      font-weight: 700;
+      padding-bottom: 12px;
+    }
+
+    span.feed-info__description-text {
+      @include text($default-font, 14, 24px, normal, $default-text-color);
+      display: block;
+      paddinf-bottom: 12px;
+    }
+
+    span.feed-info__description-author {
+      @include text($default-font, 14, 24px, normal, $default-text-color);
+      display: block;
+    }
+  }
+
+
+
+
+
+  .categories-block {
+    span.categories-block__text {
+      padding: 6px;
+      @include text($default-font, 10, normal, normal, $default-text-color);
+      text-transform: uppercase;
+      border: 1px solid $default-border-color;
+      display: inline-block;
+      margin-right: 12px;
+    }
+  }
+}
+
+
+

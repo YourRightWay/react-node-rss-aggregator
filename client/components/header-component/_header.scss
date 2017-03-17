@@ -1,0 +1,9 @@
+header {
+  height: 48px;
+  border-bottom: 1px solid $default-border-color;
+
+  span {
+    @include text($default-font, 18, 48px, normal, $default-text-color);
+    padding-left: 24px;
+  }
+}

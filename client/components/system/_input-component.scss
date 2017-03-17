@@ -1,0 +1,20 @@
+.form-group {
+  position: relative;
+
+  .g__i {
+    outline: none;
+    background: none;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    height: 48px;
+    position: relative;
+  }
+
+  .g__i--black {
+    border: 2px solid $default-border-color;
+  }
+}
