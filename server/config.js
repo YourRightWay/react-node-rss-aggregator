@@ -1,6 +1,6 @@
 const CONFIG = {
         db: 'mongodb://localhost/mongodb/data/db',
-        port: 5000
+        port: 3000
 }
 
 export default CONFIG
